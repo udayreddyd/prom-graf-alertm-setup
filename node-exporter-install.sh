@@ -9,4 +9,4 @@ sudo cp /home/opc/prom-graf-alertm-setup/node_exporter.service /etc/systemd/syst
 sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 sudo systemctl enable node_exporter
-curl localhost:9100/metrics
+#curl localhost:9100/metrics
