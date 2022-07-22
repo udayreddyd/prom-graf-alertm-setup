@@ -1,4 +1,5 @@
 sudo useradd -M -r -s /bin/false alertmanager
+cd /home/opc/
 wget https://github.com/prometheus/alertmanager/releases/download/v0.20.0/alertmanager-0.20.0.linux-amd64.tar.gz
 tar xvfz alertmanager-0.20.0.linux-amd64.tar.gz
 sudo cp alertmanager-0.20.0.linux-amd64/{alertmanager,amtool} /usr/local/bin/
