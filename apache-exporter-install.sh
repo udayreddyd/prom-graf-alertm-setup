@@ -8,7 +8,7 @@ wget https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apac
 tar xvfz /home/opc/apache_exporter-0.7.0.linux-amd64.tar.gz
 sudo cp /home/opc/apache_exporter-0.7.0.linux-amd64/apache_exporter /usr/local/bin/
 sudo chown apache_exporter:apache_exporter /usr/local/bin/apache_exporter
-cp /home/opc/prom-graf-alertm-setup/apache_exporter.service /etc/systemd/system/apache_exporter.service
+sudo cp /home/opc/prom-graf-alertm-setup/apache_exporter.service /etc/systemd/system/apache_exporter.service
 sudo systemctl enable apache_exporter
 sudo systemctl start apache_exporter
 sudo systemctl status apache_exporter
