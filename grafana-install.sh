@@ -1,11 +1,7 @@
-getenforce
-vim /etc/sysconfig/selinux
-Change SELINUX=enforcing to SELINUX=disabled
-reboot
-sudo yum install grafana
-yum install fontconfig
-yum install freetype*
-yum install urw-fonts
-sudo systemctl status grafana-server
+sudo yum install -y git
+cd /home/opc/
+wget https://dl.grafana.com/oss/release/grafana-8.1.5-1.x86_64.rpm
+sudo yum install grafana-8.1.5-1.x86_64.rpm
+sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
-systemctl enable grafana-server.service
+sudo systemctl status grafana-server
