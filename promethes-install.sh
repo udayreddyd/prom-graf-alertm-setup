@@ -18,6 +18,10 @@ sudo cp /home/opc/prom-graf-alertm-setup/prometheus.service /etc/systemd/system/
 
 ##Alert Manager rules path
 sudo mkdir -p /etc/prometheus/rules/
+sudo chown -R prometheus:prometheus /etc/prometheus/rules/
+sudo cp /home/opc/prom-graf-alertm-setup/node_up_rule.yml /etc/prometheus/rules/
+sudo chown -R prometheus:prometheus /etc/prometheus/rules/
+
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl status prometheus
