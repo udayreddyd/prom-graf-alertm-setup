@@ -15,8 +15,12 @@ sudo cp /home/opc/prom-graf-alertm-setup/alertmanager.service /etc/systemd/syste
 sudo systemctl enable alertmanager
 sudo systemctl start alertmanager
 sudo systemctl status alertmanager
+##Prometheus
 sudo firewall-cmd --zone=public --add-port=9090/tcp --permanent
+##Grafana
 sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+##NodeExporter
 sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
+##Alert Manager
 sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
 sudo firewall-cmd --reload
