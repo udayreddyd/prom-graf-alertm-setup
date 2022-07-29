@@ -12,3 +12,4 @@ sudo systemctl status node_exporter
 sudo systemctl enable node_exporter
 #curl localhost:9100/metrics
 sudo rm -rf /home/opc/node_exporter-0.18.1.linux-amd64.tar.gz
+sudo rm -rf /home/opc/node_exporter-0.18.1.linux-amd64
