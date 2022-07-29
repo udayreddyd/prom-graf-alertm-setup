@@ -1,0 +1,9 @@
+groups:
+- name: prometheus
+  rules:
+  - alert: prometheus node is currently down
+    expr: up{job="prometheus"} == 0
+    labels:
+      severity: critical
+    annotations:
+      summary: prometheus is currently down
