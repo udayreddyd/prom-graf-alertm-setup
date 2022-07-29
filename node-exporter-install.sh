@@ -11,14 +11,4 @@ sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 sudo systemctl enable node_exporter
 #curl localhost:9100/metrics
-##Prometheus
-sudo firewall-cmd --zone=public --add-port=9090/tcp --permanent
-##Grafana
-sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
-##NodeExporter
-sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
-##Alert Manager
-sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
-##Apache
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
-sudo firewall-cmd --reload
+sudo rm -rf /home/opc/node_exporter-0.18.1.linux-amd64.tar.gz
