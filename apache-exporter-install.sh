@@ -12,9 +12,14 @@ sudo cp /home/opc/prom-graf-alertm-setup/apache_exporter.service /etc/systemd/sy
 sudo systemctl enable apache_exporter
 sudo systemctl start apache_exporter
 sudo systemctl status apache_exporter
+##Prometheus
 sudo firewall-cmd --zone=public --add-port=9090/tcp --permanent
+##Grafana
 sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+##NodeExporter
 sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
+##Alert Manager
 sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
+##Apache
 sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 sudo firewall-cmd --reload
