@@ -11,3 +11,9 @@ sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 sudo systemctl enable node_exporter
 #curl localhost:9100/metrics
+sudo firewall-cmd --zone=public --add-port=9090/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --reload
