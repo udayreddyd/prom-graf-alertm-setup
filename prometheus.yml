@@ -44,7 +44,7 @@ scrape_configs:
     static_configs:
       - targets: ["GRAFANA_PRIV_IP:9100"]
 
-  - job_name: "aletmanager_node_exp"
+  - job_name: "alertmanager_node_exp"
 
     static_configs:
       - targets: ["ALERTMANAGER_PRIV_IP:9100"]
