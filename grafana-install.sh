@@ -16,3 +16,4 @@ sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
 ##Apache
 sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 sudo firewall-cmd --reload
+sudo rm -rf /home/opc/grafana-8.1.5-1.x86_64.rpm
