@@ -1,0 +1,9 @@
+groups:
+- name: alertmanager_node_exp
+  rules:
+  - alert: Alert Manager node is currently down
+    expr: up{job="alertmanager_node_exp"} == 0
+    labels:
+      severity: critical
+    annotations:
+      summary: Alert Manager server is currently down
