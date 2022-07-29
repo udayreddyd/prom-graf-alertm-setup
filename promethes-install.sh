@@ -18,3 +18,8 @@ sudo cp /home/opc/prom-graf-alertm-setup/prometheus.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl status prometheus
+sudo firewall-cmd --zone=public --add-port=9090/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
+sudo firewall-cmd --reload
