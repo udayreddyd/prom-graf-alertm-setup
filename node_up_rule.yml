@@ -1,9 +1,0 @@
-groups:
-- name: grafana_node_exporter
-  rules:
-  - alert: Grafana node is down
-    expr: up{job="grafana_node_exporter"} == 0
-  lables:
-    severity: critical
-  annotation:
-    summary: Grafana server is currently down
