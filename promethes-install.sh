@@ -3,7 +3,7 @@ cd /home/opc/
 curl -LO url -LO https://github.com/prometheus/prometheus/releases/download/v2.37.0/prometheus-2.37.0.linux-amd64.tar.gz
 tar -xvf prometheus-2.37.0.linux-amd64.tar.gz
 mkdir -p /home/opc/prometheus-files/
-cp -rf /home/opc/prometheus-2.37.0.linux-amd64/ /home/opc/prometheus-files/
+sudo mv /home/opc/prometheus-2.37.0.linux-amd64/ /home/opc/prometheus-files/
 sudo useradd --no-create-home --shell /bin/false prometheus
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
