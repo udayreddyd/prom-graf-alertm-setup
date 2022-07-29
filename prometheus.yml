@@ -27,3 +27,15 @@ scrape_configs:
 
     static_configs:
       - targets: ["localhost:9090"]
+
+
+#Below are the node_exporter configuration
+#Every time you spinup new OCI instace you need to change private IP address below
+
+  - job_name: "grafana_node_exporter"
+    static_configs:
+      - targets: ["GRAFAVA_PRIV_IP:9100"]
+
+  - job_name: "aletmanager_node_exporter"
+    static_configs:
+      - targets: ["ALERTMANAGER_PRIV_IP:9100"]
