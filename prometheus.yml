@@ -8,7 +8,11 @@ global:
 alerting:
   alertmanagers:
     - static_configs:
-        - targets:
+        - targets: ["ALERTMANAGER_PRIV_IP:9093"]
+
+#Above section is prometheus to talk to alert manager
+#Add alertmanager private IP address
+
           # - alertmanager:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
@@ -34,11 +38,11 @@ scrape_configs:
 #Every time you spinup new OCI instace you need to change private IP address below
 
   - job_name: "grafana_node_exporter"
-  
+
     static_configs:
-      - targets: ["GRAFAVA_PRIV_IP:9100"]
+      - targets: ["GRAFANA_PRIV_IP:9100"]
 
   - job_name: "aletmanager_node_exporter"
-  
+
     static_configs:
       - targets: ["ALERTMANAGER_PRIV_IP:9100"]
