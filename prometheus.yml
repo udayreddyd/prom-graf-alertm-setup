@@ -39,6 +39,11 @@ scrape_configs:
 #Below are the node_exporter configuration
 #Every time you spinup new OCI instace you need to change private IP address below
 
+  - job_name: "prometheus_node_exp"
+
+    static_configs:
+      - targets: ["PROMETHEUS_PRIV_IP:9100"]
+
   - job_name: "grafana_node_exp"
 
     static_configs:
