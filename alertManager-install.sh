@@ -24,3 +24,4 @@ sudo firewall-cmd --zone=public --add-port=7676/tcp --permanent
 ##Alert Manager
 sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
 sudo firewall-cmd --reload
+sudo rm -rf /home/opc/alertmanager-0.20.0.linux-amd64.tar.gz
