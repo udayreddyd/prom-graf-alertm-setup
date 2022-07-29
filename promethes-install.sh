@@ -29,4 +29,4 @@ sudo firewall-cmd --zone=public --add-port=9093/tcp --permanent
 ##Apache
 sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 sudo firewall-cmd --reload
-sudo rm -rf prometheus-2.37.0.linux-amd64.tar.gz
+sudo rm -rf /home/opc/prometheus-2.37.0.linux-amd64.tar.gz
