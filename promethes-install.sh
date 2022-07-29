@@ -19,7 +19,9 @@ sudo cp /home/opc/prom-graf-alertm-setup/prometheus.service /etc/systemd/system/
 ##Alert Manager rules path
 sudo mkdir -p /etc/prometheus/rules/
 sudo chown -R prometheus:prometheus /etc/prometheus/rules/
-sudo cp /home/opc/prom-graf-alertm-setup/node_up_rule.yml /etc/prometheus/rules/
+sudo cp /home/opc/prom-graf-alertm-setup/alert_manager_node_status_rule.yml /etc/prometheus/rules/
+sudo cp /home/opc/prom-graf-alertm-setup/grafana_node_status_rule.yml /etc/prometheus/rules/
+sudo cp /home/opc/prom-graf-alertm-setup/prometheus_node_status_rule.yml /etc/prometheus/rules/
 sudo chown -R prometheus:prometheus /etc/prometheus/rules/
 
 sudo systemctl daemon-reload
