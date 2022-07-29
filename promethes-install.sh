@@ -13,7 +13,7 @@ sudo cp /home/opc/prometheus-files/prometheus-2.37.0.linux-amd64/prometheus /usr
 sudo cp /home/opc/prometheus-files/prometheus-2.37.0.linux-amd64/promtool /usr/local/bin/
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
-#sudo cp /home/opc/prom-graf-alertm-setup/prometheus.yml /etc/prometheus/
+sudo cp /home/opc/prom-graf-alertm-setup/prometheus.yml /etc/prometheus/
 sudo cp /home/opc/prom-graf-alertm-setup/prometheus.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
