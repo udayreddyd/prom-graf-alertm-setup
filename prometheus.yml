@@ -39,12 +39,12 @@ scrape_configs:
 #Below are the node_exporter configuration
 #Every time you spinup new OCI instace you need to change private IP address below
 
-  - job_name: "grafana_node_exporter"
+  - job_name: "grafana_node_exp"
 
     static_configs:
       - targets: ["GRAFANA_PRIV_IP:9100"]
 
-  - job_name: "aletmanager_node_exporter"
+  - job_name: "aletmanager_node_exp"
 
     static_configs:
       - targets: ["ALERTMANAGER_PRIV_IP:9100"]
